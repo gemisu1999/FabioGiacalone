@@ -9,7 +9,7 @@ intents.messages = True
 bot = commands.Bot(command_prefix='!', help_command=None, case_insensitive=True, intents=intents)
 
 #책구절
-a1="쉰, 에순에도 그렇지 못하다면\r\n차라리 죽음이 나으리라.\r\n- 워즈워스, 무지개"
+a1="쉰, 예순에도 그렇지 못하다면\r\n차라리 죽음이 나으리라.\r\n- 워즈워스, 무지개"
 a2="나는 틈바구니에서 너를 뽑아\r\n여기 내 손 안에 쥐고 있다.\r\n온통 뿌리째.\r\n- 테니슨, 담 틈에 핀 꽃"
 a3="어떠한 입도, 아니 어떠한 정신도 표현하지 않았었지.\r\n마음에 들었던 것, 영혼이 짐작했던 것을.\r\n- 홉킨스, 봄과 가을 - 어린 소녀에게"
 a4="아, 저주스런 낭패로다.\r\n그것을 바로잡으려 내가 태어나다니.\r\n- 윌리엄 셰익스피어,햄릿"
@@ -84,7 +84,14 @@ e33=emoji.emojize(":cocktail_glass:")
 e34=emoji.emojize(":cigarette:")
 e35=""
 
-
+#만지작
+f1="무슨 짓이지."
+f2="내게 손을 대지 마. 징그럽군."
+f3="애인이 필요한가."
+f4="*(말 없이 총을 겨눈다.)*"
+f5="어울려 줄까. 내가 그러길 원하나 보군."
+f6="내게 바라는 것이 있나."
+f7=""
 
 @bot.event
 async def on_ready():             # 봇 실행 시 실행되는 함수
@@ -274,6 +281,24 @@ async def on_message(msg):
         else:
             d=e35
         await msg.channel.send(str(d))
+
+     if '사랑해' in msg.content:
+        a = random.randrange(1,7)
+        if a==1:
+            d=f1
+        elif a==2:
+            d=f2
+        elif a==3:
+            d=f3
+        elif a==4:
+            d=f4
+        elif a==5:
+            d=f5
+        elif a==6:
+            d=f6
+        else:
+            d=f7
+        await msg.channel.send(d)
 
 
 # 봇 실행
