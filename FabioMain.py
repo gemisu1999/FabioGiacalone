@@ -282,7 +282,7 @@ async def on_message(msg):
             d=e35
         await msg.channel.send(str(d))
 
-     if '사랑해' in msg.content:
+     if '만지작' in msg.content:
         a = random.randrange(1,7)
         if a==1:
             d=f1
