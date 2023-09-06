@@ -1,1 +1,1 @@
-web: FabioMain.py
+worker: python FabioMain.py
