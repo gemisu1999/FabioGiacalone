@@ -281,8 +281,8 @@ async def on_message(msg):
         else:
             d=e35
         await msg.channel.send(str(d))
-
-     if '만지작' in msg.content:
+        
+    if '만지작' in msg.content:
         a = random.randrange(1,7)
         if a==1:
             d=f1
@@ -299,6 +299,7 @@ async def on_message(msg):
         else:
             d=f7
         await msg.channel.send(d)
+    
 
 
 # 봇 실행
