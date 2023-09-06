@@ -51,7 +51,7 @@ c6=""
 @bot.event
 async def on_ready():             # 봇 실행 시 실행되는 함수
     print(f'{bot.user} 에 로그인하였습니다!')
-    await bot.change_presence(status=discord.Status.online, activity=discord.Game('독서'))
+    await bot.change_presence(status=discord.Status.online, activity=discord.Game('피셔 생각'))
 
 @bot.event
 async def on_message(msg):
@@ -112,7 +112,7 @@ async def on_message(msg):
             d=a21
         await msg.channel.send(d)
 
-    if msg.content == '사랑해':
+    if '사랑해' in msg.content:
         a = random.randrange(1,6)
         if a==1:
             d=b1
@@ -129,7 +129,7 @@ async def on_message(msg):
         await msg.channel.send(d)
     
     
-    if msg.content == '피셔':
+    if '피셔' in msg.content:
         a = random.randrange(1,6)
         if a==1:
             d=c1
