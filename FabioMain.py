@@ -66,7 +66,7 @@ async def about(ctx):
 
 @bot.event
 async def on_message(msg):    
-    if '책 읽어줘' in msg.content:
+    if '책 읽어' in msg.content:
         a = random.randrange(1,21)
         if a==1:
             d=a1
