@@ -112,7 +112,7 @@ async def on_message(msg):
             d=a21
         await msg.channel.send(d)
 
-    if '사랑해' in msg.content and ('피셔','책 읽어') not in msg.content:
+    if '사랑해' in msg.content and ('피셔'and'책 읽어') not in msg.content:
         a = random.randrange(1,6)
         if a==1:
             d=b1
@@ -129,7 +129,7 @@ async def on_message(msg):
         await msg.channel.send(d)
     
     
-    if '피셔' in msg.content and ('사랑해','책 읽어') not in msg.content:
+    if '피셔' in msg.content and ('사랑해'and'책 읽어') not in msg.content:
         a = random.randrange(1,6)
         if a==1:
             d=c1
