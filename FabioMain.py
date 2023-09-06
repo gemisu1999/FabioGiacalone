@@ -28,7 +28,7 @@ a16="당신이 내 곁을 떠나가 버려도\r\n당신을 그리는 내 마음 
 a17="이기심은 사랑을 자극하기 쉬운 성품이다.\r\n이 점을 곰곰이 생각해 봐야 한다.\r\n- 나다니엘 호손, 주홍글씨"
 a18="한 쌍의 젊은이가 서로 사랑 하는 것은 놀라운 일이 아니지만,\r\n서로를 사랑하는 한 쌍의 노인을 보는 것은 가장 아름다운 일이다.\r\n- 윌리엄 새커리, 베니티 페어"
 a19="이상은 신호등과 같다.\r\n이상이 없다면 확고한 방향이 없고,\r\n방향이 없다면 삶의 의미가 없다.\r\n- 레오 톨스토이, 안나 카레니나"
-a20="나는 홀몸으로 세상에 나왔으니,\r\n홀몸으로 돌아가야 한다.\r\n- 세르반테스, 돈키호테"
+a20="스스로 가여워하는\r\n야생의 짐승을 본 적 있는가\r\n작은 새 조차 얼어 죽어 가지에서\r\n떨어지더라도 자신을 동정하지 않는다.\r\n- D.H로렌스, 모리와 함께한 화요일"
 a21=""
 
 #사랑해
@@ -46,6 +46,44 @@ c3="피셔... 흠, 보고싶군."
 c4="그가 어디에 있는지 알고있나."
 c5="가이 피셔. 내가 사랑하는 이라네."
 c6=""
+
+#뭐 먹었어?
+e1=emoji.emojize(":banana:")
+e2=emoji.emojize(":mango:")
+e3=emoji.emojize(":olive:")
+e4=emoji.emojize(":red_apple:")
+e5=emoji.emojize(":ear_of_corn:")
+e6=emoji.emojize(":potato:")
+e7=emoji.emojize(":bacon:")
+e8=emoji.emojize(":croissant:")
+e9=emoji.emojize(":pancakes:")
+e10=emoji.emojize(":cheese_wedge:")
+e11=emoji.emojize(":meat_on_bone:")
+e12=emoji.emojize(":cut_of_meat:")
+e13=emoji.emojize(":pizza:")
+e14=emoji.emojize(":hot_dog:")
+e15=emoji.emojize(":sandwich:")
+e16=emoji.emojize(":taco:")
+e17=emoji.emojize(":burrito:")
+e18=emoji.emojize(":tamale:")
+e19=emoji.emojize(":shallow_pan_of_food:")
+e20=emoji.emojize(":green_salad:")
+e21=emoji.emojize(":spaghetti:")
+e22=emoji.emojize(":steaming_bowl:")
+e23=emoji.emojize(":curry_rice:")
+e24=emoji.emojize(":sushi:")
+e25=emoji.emojize(":moon_cake:")
+e26=emoji.emojize(":takeout_box:")
+e27=emoji.emojize(":lobster:")
+e28=emoji.emojize(":pie:")
+e29=emoji.emojize(":ice_cream:")
+e30=emoji.emojize(":beer_mug:")
+e31=emoji.emojize(":tumbler_glass:")
+e32=emoji.emojize(":wine_glass:")
+e33=emoji.emojize(":cocktail_glass:")
+e34=emoji.emojize(":cigarette:")
+e35=""
+
 
 
 @bot.event
@@ -162,6 +200,80 @@ async def on_message(msg):
     if msg.content == '꽝!!!':
         e=emoji.emojize(":face_with_spiral_eyes:")
         await msg.channel.send(str(e))
+
+    if '뭐 먹었' in msg.content:
+        a = random.randrange(1,35)
+        if a==1:
+            d=e1
+        elif a==2:
+            d=e2
+        elif a==3:
+            d=e3
+        elif a==4:
+            d=e4
+        elif a==5:
+            d=e5
+        elif a==6:
+            d=e6
+        elif a==7:
+            d=e7
+        elif a==8:
+            d=e8
+        elif a==9:
+            d=e9
+        elif a==10:
+            d=e10
+        elif a==11:
+            d=e11
+        elif a==12:
+            d=e12
+        elif a==13:
+            d=e13
+        elif a==14:
+            d=e14
+        elif a==15:
+            d=e15
+        elif a==16:
+            d=e16
+        elif a==17:
+            d=e17
+        elif a==18:
+            d=e18
+        elif a==19:
+            d=e19
+        elif a==20:
+            d=e20
+        elif a==21:
+            d=e21
+        elif a==22:
+            d=e22
+        elif a==23:
+            d=e23
+        elif a==24:
+            d=e24
+        elif a==25:
+            d=e25
+        elif a==26:
+            d=e26
+        elif a==27:
+            d=e27
+        elif a==28:
+            d=e28
+        elif a==29:
+            d=e29
+        elif a==30:
+            d=e30
+        elif a==31:
+            d=e31
+        elif a==32:
+            d=e32
+        elif a==33:
+            d=e33
+        elif a==34:
+            d=e34
+        else:
+            d=e35
+        await msg.channel.send(str(d))
 
 
 # 봇 실행
