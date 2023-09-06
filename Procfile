@@ -1,1 +1,1 @@
-worker: FabioMain.py
+echo "web: FabioMain.py" > Procfile
