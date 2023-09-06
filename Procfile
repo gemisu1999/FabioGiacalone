@@ -1,1 +1,1 @@
-echo "web: FabioMain.py" > Procfile
+web: FabioMain.py
