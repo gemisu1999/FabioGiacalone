@@ -37,7 +37,11 @@ b2="그래."
 b3="......."
 b4="*(못 들은 듯 창 밖을 보고 있다...)*"
 b5="*(책에 시선을 두고 있다...)*"
-b6=""
+b6="진지하게 대답하자면, 나는 이미 사랑하는 이가 있다네."
+b7="무얼 기대했나."
+b8="좋은 생각이 아니야."
+b9="*(익숙한 듯 무시하기 시작했다...)*"
+b10=""
 
 #피셔
 c1="...그를 언급하는 이유가 뭐지."
@@ -156,7 +160,7 @@ async def on_message(msg):
         await msg.channel.send(d)
 
     if '사랑해' in msg.content:
-        a = random.randrange(1,6)
+        a = random.randrange(1,10)
         if a==1:
             d=b1
         elif a==2:
@@ -167,8 +171,16 @@ async def on_message(msg):
             d=b4
         elif a==5:
             d=b5
-        else:
+        elif a==6:
             d=b6
+        elif a==7:
+            d=b7
+        elif a==8:
+            d=b8
+        elif a==9:
+            d=b9
+        else:
+            d=b10
         await msg.channel.send(d)
     
     
