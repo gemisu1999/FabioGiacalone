@@ -97,6 +97,14 @@ f5="어울려 줄까. 내가 그러길 원하나 보군."
 f6="내게 바라는 것이 있나."
 f7=""
 
+#사라
+g1="하하하... 자네도 내 아이가 사랑스러운가 보지."
+g2="사라, 그가 보고 싶어. 일찍 들어가야겠군, 오늘은..."
+g3="사라는 분명 아름다운 여인이 될테지. 언젠가 그가 운명의 상대를 만나 혼인식을 올린다면,\r\n잠깐, 기분이 좋지 않군." 
+g4="귀여움을 주는 것은 좋네. 하지만, 그 이상 아이에게 접근하지 말아."
+g5="사라. 사랑하는 나의 아이. 오늘은 그를 위해 책을 읽어주어야겠군."
+g6=""
+
 @bot.event
 async def on_ready():             # 봇 실행 시 실행되는 함수
     print(f'{bot.user} 에 로그인하였습니다!')
@@ -310,6 +318,22 @@ async def on_message(msg):
             d=f6
         else:
             d=f7
+        await msg.channel.send(d)
+
+     if '사라' in msg.content:
+        a = random.randrange(1,6)
+        if a==1:
+            d=g1
+        elif a==2:
+            d=g2
+        elif a==3:
+            d=g3
+        elif a==4:
+            d=g4
+        elif a==5:
+            d=g5
+        else:
+            d=g6
         await msg.channel.send(d)
     
 
