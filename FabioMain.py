@@ -320,7 +320,7 @@ async def on_message(msg):
             d=f7
         await msg.channel.send(d)
 
-     if '사라' in msg.content:
+    if '사라' in msg.content:
         a = random.randrange(1,6)
         if a==1:
             d=g1
