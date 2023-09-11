@@ -105,6 +105,14 @@ g4="귀여움을 주는 것은 좋네. 하지만, 그 이상 아이에게 접근
 g5="사라. 사랑하는 나의 아이. 오늘은 그를 위해 책을 읽어주어야겠군."
 g6=""
 
+#불사의 술
+h1="난 이제... 무엇이든 할 수 있어. 무엇이든."
+h2="죽음이 두려웠느냐고. 아니, 인간들은 죽지 않는 것의 존재를 두려워하지."
+h3="가이 피셔와 영원을 보낼 수 있다면."
+h4="신기한 것을 보여주지. 나를 총으로 쏴 봐."
+h5="영생을 사는 술을 원하나. 아쉽지만 더는 존재하지 않아."
+h6=""
+
 @bot.event
 async def on_ready():             # 봇 실행 시 실행되는 함수
     print(f'{bot.user} 에 로그인하였습니다!')
@@ -334,6 +342,22 @@ async def on_message(msg):
             d=g5
         else:
             d=g6
+        await msg.channel.send(d)
+        
+    if '불사의 술' in msg.content:
+        a = random.randrange(1,6)
+        if a==1:
+            d=h1
+        elif a==2:
+            d=h2
+        elif a==3:
+            d=h3
+        elif a==4:
+            d=h4
+        elif a==5:
+            d=h5
+        else:
+            d=h6
         await msg.channel.send(d)
     
 
