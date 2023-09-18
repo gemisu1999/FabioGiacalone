@@ -41,7 +41,9 @@ b6="진지하게 대답하자면, 나는 이미 사랑하는 이가 있다네."
 b7="무얼 기대했나."
 b8="좋은 생각이 아니야."
 b9="*(익숙한 듯 무시하기 시작했다...)*"
-b10=""
+b10="*(당신을 흥미로운 듯 바라본다.)*"
+b11="*(축음기 앞으로 가 노래를 크게 튼다. 당신의 소리가 묻혀버렸다...)*"
+b12=""
 
 #피셔
 c1="...그를 언급하는 이유가 뭐지."
@@ -113,6 +115,14 @@ h4="신기한 것을 보여주지. 나를 총으로 쏴 봐."
 h5="영생을 사는 술을 원하나. 아쉽지만 더는 존재하지 않아."
 h6=""
 
+#와압
+i1="로렌조, 이것 좀 치워주게. 불쾌하군."
+i2="*(불쾌한듯 목 안으로 긁는 소리를 낸다.)*"
+i3="귀찮게 구는군. 내 봐주는 것도 정도가 있다네."
+i4="*(파비오는 축축해졌다...)*"
+i5="*(파비오는 눅눅해졌다...)*"
+i6=""
+
 @bot.event
 async def on_ready():             # 봇 실행 시 실행되는 함수
     print(f'{bot.user} 에 로그인하였습니다!')
@@ -176,7 +186,7 @@ async def on_message(msg):
         await msg.channel.send(d)
 
     if '사랑해' in msg.content:
-        a = random.randrange(1,10)
+        a = random.randrange(1,12)
         if a==1:
             d=b1
         elif a==2:
@@ -195,8 +205,12 @@ async def on_message(msg):
             d=b8
         elif a==9:
             d=b9
-        else:
+        elif a==10:
             d=b10
+        elif a==11:
+            d=b11
+        else:
+            d=b12
         await msg.channel.send(d)
     
     
@@ -358,6 +372,22 @@ async def on_message(msg):
             d=h5
         else:
             d=h6
+        await msg.channel.send(d)
+
+    if '와압' in msg.content:
+        a = random.randrange(1,6)
+        if a==1:
+            d=i1
+        elif a==2:
+            d=i2
+        elif a==3:
+            d=i3
+        elif a==4:
+            d=i4
+        elif a==5:
+            d=i5
+        else:
+            d=i6
         await msg.channel.send(d)
     
 
