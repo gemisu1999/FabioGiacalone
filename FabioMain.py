@@ -126,7 +126,7 @@ i6=""
 @bot.event
 async def on_ready():             # 봇 실행 시 실행되는 함수
     print(f'{bot.user} 에 로그인하였습니다!')
-    await bot.change_presence(status=discord.Status.online, activity=discord.Game('피셔 생각'))
+    await bot.change_presence(status=discord.Status.online, activity=discord.Game('나쁜짓 구상'))
 
 @bot.command()
 async def about(ctx):    
