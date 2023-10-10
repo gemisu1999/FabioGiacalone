@@ -123,6 +123,15 @@ i4="*(파비오는 축축해졌다...)*"
 i5="*(파비오는 눅눅해졌다...)*"
 i6=""
 
+#좋은 아침
+j1="인사할 시간이 있나. 어서 움직여."
+j2="좋은 아침. 맛없는 커피로 시작하는 하루는 끔찍하기 짝이 없지만, 이거 누가 타온 거지."
+j3="Buongiorno."
+j4="...그래, 고맙군. 좋은 하루를 보내길."
+j5="내가 귀가 좋지 않아서. 내게 아침인사를 한건가, 방금."
+j6="좋은 아침. 부지런히 움직이도록."
+j7=""
+
 @bot.event
 async def on_ready():             # 봇 실행 시 실행되는 함수
     print(f'{bot.user} 에 로그인하였습니다!')
@@ -388,6 +397,24 @@ async def on_message(msg):
             d=i5
         else:
             d=i6
+        await msg.channel.send(d)
+
+    if '좋은 아침' in msg.content:
+        a = random.randrange(1,7)
+        if a==1:
+            d=j1
+        elif a==2:
+            d=j2
+        elif a==3:
+            d=j3
+        elif a==4:
+            d=j4
+        elif a==5:
+            d=j5
+        elif a==6:
+            d=j6
+        else:
+            d=j7
         await msg.channel.send(d)
     
 
